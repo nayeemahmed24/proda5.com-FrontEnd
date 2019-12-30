@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <title>PRODA5.com</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="vendors/linericon/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/themify-icons.css" />
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+  <link rel="stylesheet" href="vendors/animate-css/animate.css" />
+  <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.58;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+
+
+    .clearfix:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.7em;
+    }
+
+    a {
+      color: #128ff2;
+    }
+
+    button {
+      box-shadow: none;
+      border: 1px solid transparent;
+      font-size: 14px;
+      outline: none;
+      line-height: 100%;
+      white-space: nowrap;
+      vertical-align: middle;
+      padding: 0.6rem 1rem;
+      border-radius: 2px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      min-height: 38px;
+    }
+
+    button.primary {
+      background-color: #128ff2;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+    }
+
+    input {
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      border: 1px solid #128ff2;
+      padding: 6px;
+      max-width: 100%;
+    }
+
+    .file-input {
+      width: 100%;
+    }
+
+    .submit-btn {
+      display: block;
+      margin-top: 15px;
+      min-width: 100px;
+    }
+
+    @media screen and (min-width: 500px) {
+      .file-input {
+        width: calc(100% - 115px);
+      }
+
+      .submit-btn {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .upload-container {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+      margin-top: 60px;
+      min-height: 400px;
+      position: relative;
+      padding: 20px;
+    }
+
+    .upload-header {
+      border-bottom: 1px solid #ececec;
+    }
+
+    .upload-header h2 {
+      font-weight: 500;
+    }
+
+    .single-upload {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .upload-response {
+      overflow-x: hidden;
+      word-break: break-all;
+    }
+
+    .modal-content {
+      border-radius: 0px;
+      box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-backdrop.show {
+      opacity: 0.75;
+    }
+
+    .loader {
+      position: relative;
+      text-align: center;
+      margin: 15px auto 35px auto;
+      z-index: 9999;
+      display: block;
+      width: 80px;
+      height: 80px;
+      border: 10px solid rgba(0, 0, 0, .3);
+      border-radius: 50%;
+      border-top-color: #000;
+      animation: spin 1s ease-in-out infinite;
+      -webkit-animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    .top_bar
+{
+	width: 100%;
+	background: #f6f6f6;
+}
+.top_bar_content
+{
+	width: 100%;
+	height: 48px;
+	padding-left: 214px;
+}
+.top_bar_item
+{
+	margin-left: 33px;
+}
+.top_bar_item a
+{
+	font-size: 14px;
+	color: #FFFFFF;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.top_bar_item:first-child
+{
+	margin-left: 37px;
+}
+.top_bar_item_register a
+{
+	height: 100%;
+	color: #FFFFFF;	
+	font-size: 14px;
+	font-weight: 700;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+.top_bar_item_logIn a
+{
+	height: 100%;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+	margin-left: 10px;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+  </style>
+
+</head>
+<!--================Header Menu Area =================-->
+<header class="header_area">
+
+  <header class="header trans_200">
+
+    <!-- Top Bar -->
+    <div class="top_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+              <!-- <div class="top_bar_item "><a href="doctorList2.html">Request an Appointment</a></div> -->
+              <div class="top_bar_item_register  d-flex flex-row align-items-center justify-content-start ml-auto">
+                <a href="#con" id="register">Register</a>
+                
+              </div>
+
+              <div class="top_bar_item_logIn  d-flex flex-row align-items-center"><a href="login.html"
+                  id="login">Login</a></div>
+                  
+              <div class="top_bar_item_logIn  d-flex flex-row align-items-center" id="username"><a href="login.html"
+                  style="display:none;">Nayeem</a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main_menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="img/logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset w-100 " id="navbarSupportedContent">
+            <div class="row w-100 mr-0">
+              <div class="col-lg-12 pr-0">
+                <ul class="nav navbar-nav center_nav pull-right" >
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                      aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="shop_category.html">My Product</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="post_item.html">Upload Product</a>
+                      </li>
+                      <li class="nav-item" id="nav_item_user_control">
+                        <a class="nav-link" href="user_control_console.html">User Control</a>
+                      </li>
+                      <li class="nav-item" id="nav_item_edit_slider">
+                        <a class="nav-link" href="edit_slider.html">Edit Home Slider</a>
+                      </li>
+                      <script src="js/nav_item_control.js"></script>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+     
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+  <body>
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+          <div class="banner_content d-md-flex justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0">
+              <h2>Upload Product</h2>
+              <p>Input necessary details</p>
+            </div>
+            <!-- <div class="page_link">
+              <a href="shop_category.html">My Products</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!-- ==========Form area========== -->
+    <section class="blog_area single-post-area ">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 posts-list">
+            <form class="colum-12">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input class="form-control" id="product_name" placeholder="Enter Product Name">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Category</label>
+                <select id="category" class="browser-default custom-select">
+                  <option selected>Electronics</option>
+                  <option value="1">Electronics</option>
+                  <option value="2">Furniture</option>
+                  <option value="3">Kids</option>
+                  <option value="4">Ladies</option>
+                  <option value="5">Shoe</option>
+                  <option value="6">Panjabi</option>
+                  <option value="7">Pant</option>
+                  <option value="8">Shirt</option>
+                  <option value="9">Perfume</option>
+                  <option value="10">Cosmatics</option>
+                  <option value="11">Mobile</option>
+                  <option value="12">Computer</option>
+                  <option value="13">Furniture</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Product Details</label>
+                <textarea class="form-control w-100" name="comment" id="product_details" cols="30" rows="10"
+                  placeholder="Write Details of The Product"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Price</label>
+                <input class="form-control" id="price" placeholder="Enter Price">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Discount Price</label>
+                <input class="form-control" id="price" placeholder="Enter Discount Amount">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Product Specification</label>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Brand &nbsp; &nbsp; &nbsp;   </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_brand">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Model &nbsp; &nbsp; &nbsp; </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_model">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Height &nbsp; &nbsp;&nbsp; </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_height">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Width &nbsp; &nbsp; &nbsp; </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_width">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Weight &nbsp; &nbsp; </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_weight">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><span
+                        class="active">Warrenty </span></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" id="procuct_warrenty">
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h1><span>Select Photos to upload</span></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="multiple-upload">
+            <form id="multipleUploadForm" name="multipleUploadForm">
+              <input id="multipleFileUploadInput" type="file" name="files" class="file-input" multiple required />
+            </form>
+            <div class="upload-response">
+              <div id="multipleFileUploadError"></div>
+              <div id="multipleFileUploadSuccess"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+    <section class="blog_area single-post-area" style="margin-top:30px ;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="main_title">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="upload_product_button">Upload</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container" id="upload_home_slider_title" style="display: none;">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h1><span>Select Photos to upload at home slider</span></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="upload_home_slider_input" style="display: none;">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="multiple-upload">
+            <form id="sliderUploadForm" name="multipleUploadForm">
+              <input id="sliderUploadInput" type="file" name="files" class="file-input" multiple required />
+            </form>
+            <div class="upload-response">
+              <div id="multipleFileUploadError"></div>
+              <div id="multipleFileUploadSuccess"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="blog_area single-post-area section_gap" id="upload_home_slider_button" style="display: none;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="main_title">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="upload_slider_button">Upload Slider</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========================================= Modal ========================================-->
+    <div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <div class="loader"></div>
+            <div class="loader-txt">
+              <p>Uploading.... <br><br><small>Please wait... </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============Form area Ended============ -->
+    <footer class="footer-area section_gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-md-6 single-footer-widget">
+            <h4>Products</h4>
+            <ul>
+              <ul>
+                <li><a href="category.html?category=Electronics">Electronics</a></li>
+                <li><a href="ategory.html?category=Furniture">Furniture</a></li>
+                <li><a href="category.html?category=Mobile">Smart Phone</a></li>
+                <li><a href="category.html?category=Ladies">Ladies Collection</a></li>
+                <li><a href="category.html?category=Kids">Kids Collection</a></li>
+                <li><a href="category.html?category=Cosmatics">Cosmectics Collection</a></li>
+              </ul>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 single-footer-widget">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#new_product">New Products</a></li>
+              <li><a href="#featured_product">Featured Product</a></li>
+
+              <li><a href="#inspired_product">Inspired Product</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 single-footer-widget">
+            <h4> Top Products</h4>
+            <ul>
+              <li><a href="category.html?category=Electronics">Electronics</a></li>
+              <li><a href="ategory.html?category=Furniture">Furniture</a></li>
+              <li><a href="category.html?category=Mobile">Smart Phone</a></li>
+              <li><a href="category.html?category=Ladies">Ladies Collection</a></li>
+              <li><a href="category.html?category=Kids">Kids Collection</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-7 single-footer-widget ml-auto ">
+            <h4>Contacts</h4>
+            <ul>
+              <li style="color: white;">Polash Ahmed</li>
+              <li style="color: gray;">Mobile No. +8801857763383</li>
+              <li style="color: white;">Rafi Hasib</li>
+              <li style="color: gray;">Mobile No. +8801850385455</li>
+
+            </ul>
+          </div>
+
+        </div>
+        <div class="footer-bottom row align-items-center">
+          <p class="footer-text m-0 col-lg-8 col-md-12">
+            Site Developed & Managed By: Raihan Ullah, SWE, SUST.
+          </p>
+
+        </div>
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/post_item.js"></script>
+    <script src="js/post_slider.js"></script>
+  </body>
+
+</html>
