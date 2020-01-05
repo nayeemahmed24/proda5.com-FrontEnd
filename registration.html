@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Eiser ecommerce</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/css-loader.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.58;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.7em;
+        }
+
+        a {
+            color: #128ff2;
+        }
+
+        button {
+            box-shadow: none;
+            border: 1px solid transparent;
+            font-size: 14px;
+            outline: none;
+            line-height: 100%;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: 0.6rem 1rem;
+            border-radius: 2px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            min-height: 38px;
+        }
+
+        button.primary {
+            background-color: #128ff2;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            color: #fff;
+        }
+
+        input {
+            font-size: 1rem;
+        }
+
+        input[type="file"] {
+            border: 1px solid #128ff2;
+            padding: 6px;
+            max-width: 100%;
+        }
+
+        .file-input {
+            width: 100%;
+        }
+
+        .submit-btn {
+            display: block;
+            margin-top: 15px;
+            min-width: 100px;
+        }
+
+        @media screen and (min-width: 500px) {
+            .file-input {
+                width: calc(100% - 115px);
+            }
+
+            .submit-btn {
+                display: inline-block;
+                margin-top: 0;
+                margin-left: 10px;
+            }
+        }
+
+        .upload-container {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+            margin-top: 60px;
+            min-height: 400px;
+            position: relative;
+            padding: 20px;
+        }
+
+        .upload-header {
+            border-bottom: 1px solid #ececec;
+        }
+
+        .upload-header h2 {
+            font-weight: 500;
+        }
+
+        .single-upload {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .upload-response {
+            overflow-x: hidden;
+            word-break: break-all;
+        }
+    </style>
+
+</head>
+<header class="header_area">
+    <div class="main_menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html">
+                    <img src="img/logo.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content d-md-flex justify-content-between align-items-center">
+                    <div class="mb-3 mb-md-0">
+                        <h2>Registration</h2>
+                        <p>Input necessary field</p>
+                    </div>
+                    <div class="page_link">
+                        <a href="index.html">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+
+
+
+    <!--==========================================  SCRIPT TO REGISTER  START  ============================-->
+
+    <script type="text/javascript">
+        function register() {
+
+            const name = document.getElementById("register_name").value;
+            const shopName = document.getElementById("register_shopName").value;
+            const phoneNumber = document.getElementById("register_phone").value;
+            const password = document.getElementById("register_password").value;
+            const rePassword = document.getElementById("register_rePassword").value;
+
+
+            if (name == "") {
+                alert('Please Fill Name Field')
+                document.getElementById("register_name").focus();
+            }
+
+            // else if (shopName == "") {
+            //     alert('Please Fill Shop Name Field')
+            //     document.getElementById("register_shopName").focus();
+            // }
+            // else if (phoneNumber == "") {
+            //     alert('Please Fill Phone Number Field')
+            //     document.getElementById("register_phone").focus();
+            // }
+            // //
+            // else if (password == "") {
+            //     alert('Please Fill Password Field')
+            //     document.getElementById("register_password").focus();
+            // }
+            // else if (rePassword == "") {
+            //     alert('Please Fill Repeat Password Field')
+            //     document.getElementById("register_rePassword").focus();
+            // }
+            // else if (password != rePassword) {
+            //     alert('Password and Repeat Password Not matched')
+            //     document.getElementById("register_rePassword").focus();
+            // }
+            else {
+
+                var myurl = backendurl + "reg"
+                var xhr = new XMLHttpRequest();
+                var loadere = document.getElementById('loadere').setAttribute('class', 'loader loader-default is-active')
+                var data;
+                xhr.open("POST", myurl, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                data = JSON.stringify({
+                    "name": name,
+                    "password": password,
+                    "phone": phoneNumber,
+                    "shopname": shopName,
+                    "type": "seller",
+                    "status": "inactive"
+                });
+                var response;
+                xhr.onload = function () {
+
+                    if (this.status == 200) {
+                        // Here we go on the new page
+                        var jsonResponse = JSON.parse(this.response);
+                        if (jsonResponse.name != "NULL") {
+                            window.location.replace(frontendurl + "index.html");
+                            document.getElementById('loadere').setAttribute('class', 'loader ')
+
+                        }
+                    }
+                    else {
+                        document.getElementById('loadere').setAttribute('class', 'loader ')
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                            footer: '<a href = "registration.html">Try again</a>'
+                        })
+                    }
+                };
+                xhr.send(data);
+
+
+            }
+        }
+    </script>
+
+
+    <!--==========================================  SCRIPT TO REGISTER  END ============================-->
+
+
+    <!-- ==========Form area========== -->
+
+    <section class="blog_area single-post-area " style="margin-top: 25px;">
+        <div data-text="Loading..." id="loadere"></div>
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-lg-8 posts-list">
+                    <form class="colum-12">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Name</label>
+                            <input class="form-control" id="register_name" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Shop Name</label>
+                            <input class="form-control" id="register_shopName" placeholder="Enter Shop Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Phone Number</label>
+                            <input class="form-control" id="register_phone" placeholder="Enter Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="register_password"
+                                placeholder="Enter A New Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Re-write Password</label>
+                            <input type="password" class="form-control" id="register_rePassword"
+                                placeholder="Re-write the Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" style="margin-top: 15px;" class="btn btn-primary" id="button_register"
+                                onclick="register()">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--========================================= Modal ========================================-->
+        <!-- <div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="loader"></div>
+                        <div class="loader-txt">
+                            <p>Messege is sending.... <br><br><small>Please wait... </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <!--================ start footer Area  =================-->
+    <footer class="footer-area section_gap" style="margin-top: 45px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Products</h4>
+                    <ul>
+                        <ul>
+                            <li><a href="category.html?category=Electronics">Electronics</a></li>
+                            <li><a href="ategory.html?category=Furniture">Furniture</a></li>
+                            <li><a href="category.html?category=Mobile">Smart Phone</a></li>
+                            <li><a href="category.html?category=Ladies">Ladies Collection</a></li>
+                            <li><a href="category.html?category=Kids">Kids Collection</a></li>
+                            <li><a href="category.html?category=Cosmatics">Cosmectics Collection</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#new_product">New Products</a></li>
+                        <li><a href="#featured_product">Featured Product</a></li>
+
+                        <li><a href="#inspired_product">Inspired Product</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4> Top Products</h4>
+                    <ul>
+                        <li><a href="category.html?category=Electronics">Electronics</a></li>
+                        <li><a href="ategory.html?category=Furniture">Furniture</a></li>
+                        <li><a href="category.html?category=Mobile">Smart Phone</a></li>
+                        <li><a href="category.html?category=Ladies">Ladies Collection</a></li>
+                        <li><a href="category.html?category=Kids">Kids Collection</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-7 single-footer-widget ml-auto ">
+                    <h4>Contacts</h4>
+                    <ul>
+                        <li style="color: white;">Polash Ahmed</li>
+                        <li style="color: gray;">Mobile No. +8801857763383</li>
+                        <li style="color: white;">Rafi Hasib</li>
+                        <li style="color: gray;">Mobile No. +8801850385455</li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+                    Site Developed & Managed By: Raihan Ullah, SWE, SUST.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/url.js"></script>
+</body>
+
+</html>

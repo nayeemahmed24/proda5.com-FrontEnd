@@ -2,10 +2,7 @@
 <html lang="en">
 <!--   Styles For Pop Up  -->
 
-<script>
-  const backendurl = 'http://149.28.154.237:82/';
-  const frontendurl = 'http://149.28.154.237:80/';
-</script>
+<script src="js/url.js"></script>
 
 <style>
 
@@ -175,12 +172,13 @@ body {
               <p>Email: proda5.order@gmail.com</p>
             </div>
           </div>
-          <!-- <div class="col-lg-5">
+
+          <div class="col-lg-5" style="display: none;" id = "guest">
             <div class="float-right pull-right">
-              <p style="cursor: pointer; ">Login/Register</p>
+              <p style="cursor: pointer; " data-target="#login" data-toggle="modal">Login/Register</p>
             </div>
-          </div> -->
-          <div class="col-lg-5">
+          </div>
+          <div class="col-lg-5" style="display: none;" id = "loggedin">
             <div class="dropdown pull-right" id="menu">
               <button class="btn btn-primary dropdown-toggle pull-right" type="button" data-toggle="dropdown"
                 id="dropdown" style="color: #000; font-weight:500 ;">Kabir Singh
@@ -188,7 +186,7 @@ body {
               <ul class="dropdown-content" style="margin-top: 38px;" id="dropdownconfig">
                 <li class="nav-item"><a class="nav-link" href="#">My product</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">My product</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">My product</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
 
               </ul>
             
@@ -198,6 +196,19 @@ body {
 
       </div>
     </div>
+    
+    <script>
+      if(window.localStorage.getItem('user') == null){
+        document.getElementById('guest').style.display = "block";
+        document.getElementById('loggedin').style.display = "none";
+        
+      }
+      else{
+        document.getElementById('guest').style.display = "none";
+        document.getElementById('loggedin').style.display = "block";
+        
+      }
+    </script>
 
     <div class="main_menu">
       <div class="container">
@@ -280,11 +291,7 @@ body {
 
         }
       };
-
-
       xhr.send(data);
-
-
     }
   </script>
 
